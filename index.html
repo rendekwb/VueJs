@@ -7,15 +7,29 @@
   </head>
   <body>
     <div id="shopping-list">
-      <h1>{{header}}</h1>
+      <h1>{{ header.toLocaleUpperCase() }}</h1>
+      <div class="add-item-form">
+          <input type="text" v-model="newItem" placeholder="Add an additional item" @keyup.enter="items.push(newItem)">
+          <button type="button" name="button" @click="items.push(newItem)">Add Item</button>
+      </div>
+
+      <ul>
+        <li v-for="item in items">{{item}}</li>
+      </ul>
     </div>
 
     <script src="https://unpkg.com/vue"></script>
     <script>
-      new Vue({
+      var app = new Vue({
         el: '#shopping-list',
         data: {
-          header: 'Vue is ready to party'
+          header: 'Shopping List App',
+          newItem: '',
+          items: [
+            '10 party hats',
+            '2 board games',
+            '20 cups'
+          ]
         }
       })
     </script>
