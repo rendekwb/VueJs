@@ -17,7 +17,9 @@
       </div>
       <div class="flex">
         <ul id="shopping-items-list" v-if="items.length != 0">
-          <li v-for="item in items">{{item}}</li>
+          <li v-for="item in items" :class="{strikethrough: item.purchased}" @click="item.purchased = !item.purchased">
+            {{item.description}}
+          </li>
         </ul>
         <p v-else>Way to go! You bought all your items</p>
       </div>

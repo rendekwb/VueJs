@@ -32,6 +32,10 @@ button {
   margin: 0 auto;
 }
 
+.strikethrough {
+  text-decoration: line-through;
+}
+
 #app {
   position: absolute;
   top: 40%;

@@ -7,7 +7,10 @@ var main = new Vue({
   },
   methods: {
     addNewItem() {
-      this.items.push(this.newItem);
+      this.items.push({
+        description: this.newItem,
+        purchased: false
+      });
       this.newItem = "";
     }
   }
