@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue JS Fundamentals</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto" rel="stylesheet">
+    <link type="text/css" href="./style.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <div id="app">
+      <header>
+        <h1>{{header}}</h1>
+      </header>
+      <div class="flex flex-center">
+        <input type="text" v-model="newItem" id="new-item-input">
+        <button type="button" @click="addNewItem">Add Item</button>
+      </div>
+      <div class="flex">
+        <ul id="shopping-items-list" v-if="items.length != 0">
+          <li v-for="item in items">{{item}}</li>
+        </ul>
+        <p v-else>Way to go! You bought all your items</p>
+      </div>
+    </div>
+
+    <script src="https://www.unpkg.com/vue"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

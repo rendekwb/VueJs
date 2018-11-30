@@ -1,0 +1,67 @@
+html, body {
+  margin, padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #fffae1;
+}
+
+header {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+button {
+  font-size: 12pt;
+  font-weight: 600;
+  font-family: 'Roboto Slab', serif;
+  background-color: #4966ff;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 0 2px;
+  margin: 0 15px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  margin: 0 auto;
+}
+
+#app {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  background: white;
+  box-shadow: 0 0 2px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#new-item-input {
+  font-size: 14pt;
+  font-family: 'Roboto', sans-serif;
+  height: 30px;
+  width: 80%;
+  -webkit-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.17);
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.17);
+  border-radius: 5px;
+  border-width: 1px black solid;
+}
+
+#shopping-items-list {
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
+}
+
+#shopping-items-list li {
+  cursor: pointer;
+}
